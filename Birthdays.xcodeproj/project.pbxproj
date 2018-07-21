@@ -12,7 +12,10 @@
 		F14BF4D3210366CC000C6764 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F14BF4D1210366CC000C6764 /* Main.storyboard */; };
 		F14BF4D5210366D5000C6764 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F14BF4D4210366D5000C6764 /* Assets.xcassets */; };
 		F14BF4D8210366D5000C6764 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F14BF4D6210366D5000C6764 /* LaunchScreen.storyboard */; };
-		F14BF4E3210366D5000C6764 /* BirthdaysTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14BF4E2210366D5000C6764 /* BirthdaysTests.swift */; };
+		F14BF4EF2103690B000C6764 /* Birthday.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14BF4EE2103690B000C6764 /* Birthday.swift */; };
+		F14BF4F22103694A000C6764 /* BirthdayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14BF4F12103694A000C6764 /* BirthdayTests.swift */; };
+		F14BF4F421036D28000C6764 /* Birthdays.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14BF4F321036D28000C6764 /* Birthdays.swift */; };
+		F14BF4F621036D50000C6764 /* BirthdaysTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14BF4F521036D50000C6764 /* BirthdaysTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,8 +37,11 @@
 		F14BF4D7210366D5000C6764 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F14BF4D9210366D5000C6764 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F14BF4DE210366D5000C6764 /* BirthdaysTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BirthdaysTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F14BF4E2210366D5000C6764 /* BirthdaysTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdaysTests.swift; sourceTree = "<group>"; };
 		F14BF4E4210366D5000C6764 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F14BF4EE2103690B000C6764 /* Birthday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Birthday.swift; sourceTree = "<group>"; };
+		F14BF4F12103694A000C6764 /* BirthdayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayTests.swift; sourceTree = "<group>"; };
+		F14BF4F321036D28000C6764 /* Birthdays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Birthdays.swift; sourceTree = "<group>"; };
+		F14BF4F521036D50000C6764 /* BirthdaysTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdaysTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,7 @@
 		F14BF4CC210366CC000C6764 /* Birthdays */ = {
 			isa = PBXGroup;
 			children = (
+				F14BF4ED210368DA000C6764 /* BirthdayModel */,
 				F14BF4CD210366CC000C6764 /* AppDelegate.swift */,
 				F14BF4CF210366CC000C6764 /* ViewController.swift */,
 				F14BF4D1210366CC000C6764 /* Main.storyboard */,
@@ -90,10 +97,28 @@
 		F14BF4E1210366D5000C6764 /* BirthdaysTests */ = {
 			isa = PBXGroup;
 			children = (
-				F14BF4E2210366D5000C6764 /* BirthdaysTests.swift */,
+				F14BF4F02103692D000C6764 /* BirthdayModel */,
 				F14BF4E4210366D5000C6764 /* Info.plist */,
 			);
 			path = BirthdaysTests;
+			sourceTree = "<group>";
+		};
+		F14BF4ED210368DA000C6764 /* BirthdayModel */ = {
+			isa = PBXGroup;
+			children = (
+				F14BF4EE2103690B000C6764 /* Birthday.swift */,
+				F14BF4F321036D28000C6764 /* Birthdays.swift */,
+			);
+			path = BirthdayModel;
+			sourceTree = "<group>";
+		};
+		F14BF4F02103692D000C6764 /* BirthdayModel */ = {
+			isa = PBXGroup;
+			children = (
+				F14BF4F12103694A000C6764 /* BirthdayTests.swift */,
+				F14BF4F521036D50000C6764 /* BirthdaysTests.swift */,
+			);
+			path = BirthdayModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,8 +222,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F14BF4F421036D28000C6764 /* Birthdays.swift in Sources */,
 				F14BF4D0210366CC000C6764 /* ViewController.swift in Sources */,
 				F14BF4CE210366CC000C6764 /* AppDelegate.swift in Sources */,
+				F14BF4EF2103690B000C6764 /* Birthday.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,7 +233,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F14BF4E3210366D5000C6764 /* BirthdaysTests.swift in Sources */,
+				F14BF4F621036D50000C6764 /* BirthdaysTests.swift in Sources */,
+				F14BF4F22103694A000C6764 /* BirthdayTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
