@@ -43,10 +43,4 @@ struct Birthdays {
         let laterBirthdays   = birthdays.filter({ $0.month >= month }).sorted()
         return laterBirthdays + earlierBirthdays
     }
-
-    subscript(_ index: Int) -> Birthday {
-        get {
-            return birthdays[index]
-        }
-    }
 }
