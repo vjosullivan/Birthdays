@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import EventKit
 
 class ViewController: UIViewController {
 
@@ -24,18 +23,17 @@ class ViewController: UIViewController {
 extension ViewController {
 
     fileprivate func calendarAccess() {
-        let calendarManager = CalendarManager(eventStore: EventStoreAdapter(eventStore: EKEventStore()))
+        let calendarManager = CalendarManager(eventStore: EventStoreAdapter())
         switch calendarManager.calendarAccessStatus() {
         case .permitted:
-            print("CA permitted.")
+            print("Perform CA is permitted action.")
         case .denied:
-            print("CA denied.")
-
+            print("Perform CA is denied action.")
         case .unknown:
             // No setting found (probably because this is the first run of this app on the device).
             calendarManager.requestCalendarAccess(
-                completionIfGranted: { print("Calendar access permitted.") },
-                completionIfDenied:  { print("Calendar access denied.") })
+                completionIfGranted: { print("Requested Calendar access granted.  Perform permitted action?") },
+                completionIfDenied:  { print("Requested Calendar access denied.  Perform denial action?") })
         }
     }
 }

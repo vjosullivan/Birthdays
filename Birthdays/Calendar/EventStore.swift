@@ -21,7 +21,7 @@ enum EntityType {
 }
 
 protocol EventStore {
-    func requestAccess(to entityType: EntityType, completion: @escaping EKEventStoreRequestAccessCompletionHandler)
+    func requestAccess(to entityType: EntityType, completion: @escaping (Bool, Error?) -> Void)
     func authorizationStatus(for entityType: EntityType) -> AuthorizationStatus
 }
 
@@ -29,11 +29,11 @@ class EventStoreAdapter: EventStore {
 
     private let eventStore: EKEventStore
 
-    init(eventStore: EKEventStore) {
+    init(eventStore: EKEventStore = EKEventStore()) {
         self.eventStore = eventStore
     }
 
-    func requestAccess(to entityType: EntityType, completion: @escaping EKEventStoreRequestAccessCompletionHandler) {
+    func requestAccess(to entityType: EntityType, completion: @escaping (Bool, Error?) -> Void) {
         let type = (entityType == .event) ? EKEntityType.event : EKEntityType.reminder
         eventStore.requestAccess(to: type, completion: completion)
     }
