@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F1245E432105D3B200AA5948 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1245E422105D3B200AA5948 /* Launch Screen.storyboard */; };
+		F1245E452105E96000AA5948 /* CalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1245E442105E96000AA5948 /* CalendarManager.swift */; };
+		F1245E492105F19600AA5948 /* CalendarManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1245E482105F19600AA5948 /* CalendarManagerTests.swift */; };
+		F1245E4D2106337400AA5948 /* EventStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1245E4C2106337400AA5948 /* EventStore.swift */; };
+		F1245E532106621600AA5948 /* MockEventStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1245E522106621600AA5948 /* MockEventStore.swift */; };
 		F14BF4CE210366CC000C6764 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14BF4CD210366CC000C6764 /* AppDelegate.swift */; };
 		F14BF4D0210366CC000C6764 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14BF4CF210366CC000C6764 /* ViewController.swift */; };
 		F14BF4D3210366CC000C6764 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F14BF4D1210366CC000C6764 /* Main.storyboard */; };
@@ -29,6 +34,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F1245E422105D3B200AA5948 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		F1245E442105E96000AA5948 /* CalendarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarManager.swift; sourceTree = "<group>"; };
+		F1245E482105F19600AA5948 /* CalendarManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarManagerTests.swift; sourceTree = "<group>"; };
+		F1245E4C2106337400AA5948 /* EventStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventStore.swift; sourceTree = "<group>"; };
+		F1245E522106621600AA5948 /* MockEventStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEventStore.swift; sourceTree = "<group>"; };
 		F14BF4CA210366CC000C6764 /* Birthdays.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Birthdays.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F14BF4CD210366CC000C6764 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F14BF4CF210366CC000C6764 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +72,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F1245E412105D2DA00AA5948 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				F14BF4D9210366D5000C6764 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		F1245E462105F15C00AA5948 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				F1245E442105E96000AA5948 /* CalendarManager.swift */,
+				F1245E4C2106337400AA5948 /* EventStore.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		F1245E472105F17400AA5948 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				F1245E482105F19600AA5948 /* CalendarManagerTests.swift */,
+				F1245E522106621600AA5948 /* MockEventStore.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
 		F14BF4C1210366CC000C6764 = {
 			isa = PBXGroup;
 			children = (
@@ -83,13 +119,15 @@
 		F14BF4CC210366CC000C6764 /* Birthdays */ = {
 			isa = PBXGroup;
 			children = (
-				F14BF4ED210368DA000C6764 /* BirthdayModel */,
 				F14BF4CD210366CC000C6764 /* AppDelegate.swift */,
-				F14BF4CF210366CC000C6764 /* ViewController.swift */,
 				F14BF4D1210366CC000C6764 /* Main.storyboard */,
+				F1245E422105D3B200AA5948 /* Launch Screen.storyboard */,
+				F14BF4CF210366CC000C6764 /* ViewController.swift */,
+				F14BF4ED210368DA000C6764 /* BirthdayModel */,
+				F1245E462105F15C00AA5948 /* Calendar */,
 				F14BF4D4210366D5000C6764 /* Assets.xcassets */,
 				F14BF4D6210366D5000C6764 /* LaunchScreen.storyboard */,
-				F14BF4D9210366D5000C6764 /* Info.plist */,
+				F1245E412105D2DA00AA5948 /* SupportingFiles */,
 			);
 			path = Birthdays;
 			sourceTree = "<group>";
@@ -97,6 +135,7 @@
 		F14BF4E1210366D5000C6764 /* BirthdaysTests */ = {
 			isa = PBXGroup;
 			children = (
+				F1245E472105F17400AA5948 /* Calendar */,
 				F14BF4F02103692D000C6764 /* BirthdayModel */,
 				F14BF4E4210366D5000C6764 /* Info.plist */,
 			);
@@ -204,6 +243,7 @@
 			files = (
 				F14BF4D8210366D5000C6764 /* LaunchScreen.storyboard in Resources */,
 				F14BF4D5210366D5000C6764 /* Assets.xcassets in Resources */,
+				F1245E432105D3B200AA5948 /* Launch Screen.storyboard in Resources */,
 				F14BF4D3210366CC000C6764 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,10 +262,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1245E4D2106337400AA5948 /* EventStore.swift in Sources */,
 				F14BF4F421036D28000C6764 /* Birthdays.swift in Sources */,
 				F14BF4D0210366CC000C6764 /* ViewController.swift in Sources */,
 				F14BF4CE210366CC000C6764 /* AppDelegate.swift in Sources */,
 				F14BF4EF2103690B000C6764 /* Birthday.swift in Sources */,
+				F1245E452105E96000AA5948 /* CalendarManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +275,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1245E532106621600AA5948 /* MockEventStore.swift in Sources */,
+				F1245E492105F19600AA5948 /* CalendarManagerTests.swift in Sources */,
 				F14BF4F621036D50000C6764 /* BirthdaysTests.swift in Sources */,
 				F14BF4F22103694A000C6764 /* BirthdayTests.swift in Sources */,
 			);
@@ -390,7 +434,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 27QRRWZMS6;
-				INFOPLIST_FILE = Birthdays/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Birthdays/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -408,7 +452,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 27QRRWZMS6;
-				INFOPLIST_FILE = Birthdays/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Birthdays/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
